@@ -83,7 +83,7 @@ class Board:
 		f = 0
 		for m in moves:
 			bd[m] = markers[f]
-			f ^= 1		# toggle the index flag between 0 and 1
+			f ^= 1		# toggle the index flag between 0 and 1 
 		
 		s = ''.join(bd)
 		
