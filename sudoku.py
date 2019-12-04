@@ -184,6 +184,9 @@ class Sudoku (object):
 		hard = [2,0,8, 0,0,1, 3,6,0, 5,0,9, 0,0,3, 1,0,0, 0,0,0, 0,0,0, 0,0,9, 
 				0,0,3, 0,0,0, 0,1,2, 1,0,0, 0,2,0, 8,0,0, 0,9,0, 0,0,0, 0,0,7, 
 				4,0,0, 0,7,0, 0,0,3, 6,0,0, 3,0,8, 0,4,0, 0,0,0, 0,0,0, 6,0,5]
+		hard1= [0,0,0, 0,0,0, 0,8,9, 0,0,7, 3,0,0, 0,5,0, 0,8,0, 0,5,4, 0,0,0,
+				0,0,0, 7,0,0, 0,0,2, 0,0,6, 0,8,0, 7,0,0, 5,0,0, 0,0,9, 0,0,0,
+				0,0,0, 2,1,0, 0,6,0, 0,4,0, 0,0,5, 2,0,0, 2,3,0, 0,0,0, 0,0,0]
 		expt = [8,0,0, 1,0,0, 5,4,0, 0,0,0, 2,0,0, 0,7,0, 0,7,5, 0,0,4, 0,9,0, 
 				0,0,0, 9,1,0, 0,0,0, 0,0,9, 8,0,7, 0,5,2, 0,0,7, 0,0,5, 0,1,0, 
 				1,0,0, 0,3,0, 0,2,7, 0,0,0, 7,9,2, 0,0,0, 0,0,0, 0,0,0, 0,0,0]
@@ -194,7 +197,8 @@ class Sudoku (object):
 				0,5,0, 0,0,7, 0,0,0, 0,0,0, 0,4,5, 7,0,0, 0,0,0, 1,0,0, 3,0,0,
 				0,0,1, 0,0,0, 0,6,8, 0,0,8, 5,0,0, 0,1,0, 0,9,0, 0,0,0, 4,0,0,]
 		
-		boards = [easy, med, hard, expt, expt1, insane]
+		boards = [easy, med, hard, hard1, expt, expt1, insane]
+		#TODO: hard1 breaks the solver
 		bd = bd % len(boards)
 		board = boards[bd]
 		for i in range(len(board)):
@@ -463,7 +467,7 @@ class MyScene (Scene):
 		even_color =	'#ffd2a1'
 		odd_color =     '#ffae55'
 		l_tile = self.l_tile
-		self.status = 'Draw'
+#		self.status = 'Draw'
 		gap = self.gap
 		self.preload_index = 0
 		self.undo = []		# each undo event is a list of (square, value) tuples
@@ -733,7 +737,8 @@ def test5():
 	return game.solve()
 
 print("ready")
+'''
 
-'''	
+
 
 
