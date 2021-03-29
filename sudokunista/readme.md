@@ -7,5 +7,5 @@ sudokugame.py -- game engine and solvers. Hsolve attempts to emulate a human sol
 
 sudoku.py -- the Pythonista GUI
 
-sudokudb.db -- SQLite game database
+sudoku.db -- SQLite game database
 
