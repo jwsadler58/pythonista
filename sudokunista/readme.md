@@ -1,5 +1,5 @@
-Sudoku trainer for Pythonista 
--- John Sadler 2021 --
+# Sudoku trainer for Pythonista 
+## John Sadler 2021
 
 sudokudb.py -- SQLite database to persist games and ratings
 
