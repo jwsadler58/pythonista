@@ -1,4 +1,4 @@
-#tictactoe for pythonista
+# tictactoe for pythonista
 Heuristic and ML versions plus research tools for Q-learning engine
 
 - tictactoe0: Console app with heuristic game engine
